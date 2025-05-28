@@ -19,8 +19,6 @@ from extract_utils.main import (
 )
 
 blob_fixups: blob_fixups_user_type = {
-    'system/lib64/libmicampostproc_client.so': blob_fixup()
-        .remove_needed('libhidltransport.so'),
     'system/lib64/libcamera_algoup_jni.xiaomi.so': blob_fixup()
         .sig_replace('08 AD 40 F9', '08 A9 40 F9'),
 }  # fmt: skip
@@ -35,8 +33,7 @@ lib_fixups: lib_fixups_user_type = {
 namespace_imports = [
     'hardware/qcom-caf/common/libqti-perfd-client',
     'vendor/qcom/opensource/display',
-    'vendor/xiaomi/alioth',
-    'vendor/xiaomi/sm8250-common',
+    'vendor/xiaomi/apollo',
 ]
 
 module = ExtractUtilsModule(

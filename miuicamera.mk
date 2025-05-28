@@ -25,8 +25,7 @@ PRODUCT_COPY_FILES += \
 
 # Device-Features
 PRODUCT_COPY_FILES += \
-     $(CAMERA_PATH)/configs/device_features/alioth.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/alioth.xml \
-     $(CAMERA_PATH)/configs/device_features/aliothin.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/aliothin.xml
+    $(CAMERA_PATH)/configs/device_features/apollo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/apollo.xml
 
 # Symlinks
 PRODUCT_PACKAGES += \
@@ -50,7 +49,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
    log.tag.CHIUSECASE=ERROR
 
 PRODUCT_VENDOR_PROPERTIES += \
-   persist.vendor.camera.logInfoMask=false
+   persist.vendor.camera.logInfoMask=0
 
 # Sepolicy Camera
 BOARD_VENDOR_SEPOLICY_DIRS += \
@@ -89,7 +88,6 @@ PRODUCT_PACKAGES += \
 
 # System Properties
 PRODUCT_SYSTEM_PROPERTIES += \
-    persist.vendor.camera.privapp.list=com.android.camera \
-    ro.com.google.lens.oem_camera_package=com.android.camera
+    persist.vendor.camera.privapp.list=com.android.camera
 
 $(call inherit-product, $(CAMERA_VENDOR_PATH)/camera-vendor.mk)
