@@ -1,6 +1,6 @@
 # proprietary_device_xiaomi_camera
 
-Prebuilt modded MIUI/Leica Camera 5.0 for Poco F3/Redmi K40/Mi 11x (alioth), to include in custom ROM builds.
+Prebuilt modded MIUI/Leica Camera 5.0 for Mi 10T/Mi 10T pro (apollo), to include in custom ROM builds.
 
 ### How to use?
 

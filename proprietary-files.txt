@@ -1,4 +1,4 @@
-# From Alioth HyperOS 1.0.3.0 Mi package
+# From Apollo MIUI 14.0.4 Mi package
 
 # Leica App Custom Mod
 system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=GrapheneCamera,Camera,Camera2,Aperture,GoogleCameraGo
@@ -7,22 +7,54 @@ system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=GrapheneCamera,Camera,Camera
 system/etc/public.libraries-xiaomi.txt
 system/lib64/libcamera_algoup_jni.xiaomi.so
 system/lib64/libcamera_mianode_jni.xiaomi.so
-system/lib64/libmicampostproc_client.so
-system/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
 
 # Device OpenCL Prebuilts
 system_ext/lib/libOpenCL_system.so:system/lib/libOpenCL_system.so
 system_ext/lib64/libOpenCL_system.so:system/lib64/libOpenCL_system.so
 
 # Device Camera Deps
+system/lib64/libarcsoft_single_chart_calibration.so
+system/lib64/libgallery_arcsoft_dualcam_refocus.so;FIX_SONAME
+system/lib64/libgallery_arcsoft_portrait_lighting.so;FIX_SONAME
+system/lib64/libgallery_arcsoft_portrait_lighting_c.so;FIX_SONAME
+system/lib64/libgallery_block_sdk.so
+system/lib64/libgallery_mpbase.so;FIX_SONAME
 vendor/bin/f2player
+vendor/lib64/com.qcom.plugin.gpu.so
+vendor/lib64/com.qcom.plugin.jpegencode.so
+vendor/lib64/com.xiaomi.plugin.bodyslim.so
+vendor/lib64/com.xiaomi.plugin.capbokeh.so
+vendor/lib64/com.xiaomi.plugin.dc.so
+vendor/lib64/com.xiaomi.plugin.depurple.so
+vendor/lib64/com.xiaomi.plugin.hdr.so
+vendor/lib64/com.xiaomi.plugin.ldc.so
+vendor/lib64/com.xiaomi.plugin.memcpy.so
+vendor/lib64/com.xiaomi.plugin.miaideblur.so
+vendor/lib64/com.xiaomi.plugin.miaiie.so
+vendor/lib64/com.xiaomi.plugin.miflaw.so
+vendor/lib64/com.xiaomi.plugin.mifragment.so
+vendor/lib64/com.xiaomi.plugin.misegment.so
+vendor/lib64/com.xiaomi.plugin.skinbeautifier.so
+vendor/lib64/com.xiaomi.plugin.sr.so
+vendor/lib64/com.xiaomi.plugin.supernight.so
+vendor/lib64/com.xiaomi.plugin.superportrait.so
+vendor/lib64/lib_sr_models.so
+vendor/lib64/libalCFR.so
 vendor/lib64/libarcsat.so
-vendor/lib64/libsupermoon.so
+vendor/lib64/libmiai_deblur.so
+vendor/lib64/libmiai_portraitsupernight.so
+vendor/lib64/libsdk_sr.so
+vendor/camera/mimoji/data.zip
+vendor/camera/mimoji/model2.zip
+
+# Device Camera Postprocessing Framework
+system/framework/vendor.xiaomi.hardware.campostproc-V1.0-java.jar
+system/etc/permissions/vendor.xiaomi.hardware.campostproc-V1.0-java-permission.xml
 
 # Device Camera Dependencies & Overwrites
 system/lib64/libmqsas.so
-system_ext/lib64/libcameraimpl.so:system/lib64/libcameraimpl.so
 system_ext/lib64/libopencl-camera.so:system/lib64/libopencl-camera.so
+vendor/etc/camera/sr_params.xml
 
 # MiSys
 system/etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml
@@ -33,7 +65,7 @@ system/framework/vendor.xiaomi.hardware.misys-V1.0-java.jar;BOOT_JAR
 system/framework/vendor.xiaomi.hardware.misys-V2.0-java.jar;BOOT_JAR
 system/framework/vendor.xiaomi.hardware.misys-V4.0-java.jar;BOOT_JAR
 system/framework/vendor.xiaomi.hardware.misys.V3_0.jar;BOOT_JAR
-system/lib64/libmisys_jni.xiaomi.so
+system/lib64/libmisys_jni.so
 system/lib64/vendor.xiaomi.hardware.misys@1.0.so;MODULE_SUFFIX=_system
 system/lib64/vendor.xiaomi.hardware.misys@2.0.so;MODULE_SUFFIX=_system
 system/lib64/vendor.xiaomi.hardware.misys@3.0.so;MODULE_SUFFIX=_system
@@ -80,14 +112,6 @@ vendor/etc/camera/110_BlackGold.png
 vendor/etc/camera/111_GreenOrange.png
 vendor/etc/camera/112_CyberPunk.png
 vendor/etc/camera/113_BlackIce.png
-vendor/etc/camera/121_Bleach.png
-vendor/etc/camera/122_Thriller.png
-vendor/etc/camera/123_TealOrange.png
-vendor/etc/camera/124_JapaneseStyle.png
-vendor/etc/camera/125_Latin.png
-vendor/etc/camera/126_Fantasy2.png
-vendor/etc/camera/127_Creamy.png
-vendor/etc/camera/128_Sepia.png
 vendor/etc/camera/sceneDetection.xml
 
 # Camera Extensions
