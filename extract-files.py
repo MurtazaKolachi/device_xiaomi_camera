@@ -35,8 +35,7 @@ lib_fixups: lib_fixups_user_type = {
 namespace_imports = [
     'hardware/qcom-caf/common/libqti-perfd-client',
     'vendor/qcom/opensource/display',
-    'vendor/xiaomi/alioth',
-    'vendor/xiaomi/sm8250-common',
+    'vendor/xiaomi/apollo',
 ]
 
 module = ExtractUtilsModule(
