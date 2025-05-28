@@ -1,6 +1,6 @@
 # Xiaomi Camera for POCO F3 (alioth)
 
-![POCO F3 (alioth) — Xiaomi Camera](assets/poco-f3-xiaomi-camera.webp)
+Prebuilt modded MIUI/Leica Camera 5.0 for Mi 10T/Mi 10T pro (apollo), to include in custom ROM builds.
 
 Device-side integration and compatibility layer for Xiaomi Camera on the
 **POCO F3 / Redmi K40 / Mi 11X (alioth)** family, with the corresponding
