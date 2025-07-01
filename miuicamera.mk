@@ -11,6 +11,9 @@ CAMERA_VENDOR_PATH := vendor/xiaomi/camera
 PRODUCT_COPY_FILES += \
      $(call find-copy-subdir-files,*,$(CAMERA_PATH)/configs/permissions/,$(TARGET_COPY_OUT_SYSTEM)/etc)
 
+PRODUCT_PACKAGES += \
+    libgui_shim_miuicamera
+
 # CameraX Config Overwrite
 PRODUCT_COPY_FILES += \
      $(CAMERA_PATH)/configs/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
