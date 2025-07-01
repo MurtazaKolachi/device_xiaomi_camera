@@ -2,3 +2,8 @@ cc_library {
     name: "libgui_camera_shim",
     srcs: ["libgui_camera_shim.c"],
 }
+
+cc_library_shared {
+    name: "libgui_shim_miuicamera",
+    srcs: ["libgui_shim_miuicamera.c"],
+}

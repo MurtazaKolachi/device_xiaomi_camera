@@ -18,6 +18,9 @@ PRODUCT_COPY_FILES += \
     $(CAMERA_PATH)/configs/permissions/product/privapp-permissions-extraphoto.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-extraphoto.xml \
     $(CAMERA_PATH)/configs/permissions/system_ext/gson.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/gson.xml
 
+PRODUCT_PACKAGES += \
+    libgui_shim_miuicamera
+
 # CameraX Config Overwrite
 PRODUCT_COPY_FILES += \
      $(CAMERA_PATH)/configs/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
