@@ -47,7 +47,6 @@ vendor/lib64/libmiai_portraitsupernight.so
 vendor/lib64/libsdk_sr.so
 vendor/camera/mimoji/data.zip
 vendor/camera/mimoji/model2.zip
-system/lib64/libgui.so:system/lib64/libgui-xiaomi.so
 
 # Device Camera Postprocessing Framework
 system/framework/vendor.xiaomi.hardware.campostproc-V1.0-java.jar
