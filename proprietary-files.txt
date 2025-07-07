@@ -13,7 +13,6 @@ system_ext/lib/libOpenCL_system.so:system/lib/libOpenCL_system.so
 system_ext/lib64/libOpenCL_system.so:system/lib64/libOpenCL_system.so
 
 # Device Camera Deps
-vendor/lib64/hw/vendor.xiaomi.hardware.campostproc@1.0-impl.so
 system/lib64/libarcsoft_single_chart_calibration.so
 system/lib64/libgallery_arcsoft_dualcam_refocus.so;FIX_SONAME
 system/lib64/libgallery_arcsoft_portrait_lighting.so;FIX_SONAME
@@ -54,7 +53,6 @@ system/etc/permissions/vendor.xiaomi.hardware.campostproc-V1.0-java-permission.x
 
 # Device Camera Dependencies & Overwrites
 system/lib64/libmqsas.so
-system_ext/lib64/libcameraimpl.so:system/lib64/libcameraimpl.so
 system_ext/lib64/libopencl-camera.so:system/lib64/libopencl-camera.so
 vendor/etc/camera/sr_params.xml
 
@@ -118,3 +116,36 @@ vendor/etc/camera/sceneDetection.xml
 
 # Camera Extensions
 system_ext/framework/camerax-vendor-extensions.jar:system/framework/camerax-vendor-extensions.jar;BOOT_JAR
+
+# Test
+system/lib64/android.hardware.camera.common@1.0.so
+vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
+vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc:vendor/etc/init/android.hardware.camera.provider@2.4-service_64-qti.rc
+vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so
+vendor/lib/android.hardware.camera.provider@2.4-external.so
+vendor/lib/android.hardware.camera.provider@2.4-legacy.so
+vendor/lib/camera.device@1.0-impl.so
+vendor/lib/camera.device@3.2-impl.so
+vendor/lib/camera.device@3.3-impl.so
+vendor/lib/camera.device@3.4-external-impl.so
+vendor/lib/camera.device@3.4-impl.so
+vendor/lib/camera.device@3.5-external-impl.so
+vendor/lib/camera.device@3.5-impl.so
+vendor/lib/camera.device@3.6-external-impl.so
+vendor/lib/vendor.qti.hardware.camera.device@1.0.so:vendor/lib/vendor.qti.hardware.camera.device@1.0_vendor.so;FIX_SONAME
+vendor/lib/vendor.qti.hardware.camera.device@2.0.so
+vendor/lib/vendor.qti.hardware.camera.device@3.5.so
+vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
+vendor/lib64/android.hardware.camera.provider@2.4-external.so
+vendor/lib64/android.hardware.camera.provider@2.4-legacy.so
+vendor/lib64/camera.device@1.0-impl.so
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/camera.device@3.4-external-impl.so
+vendor/lib64/camera.device@3.4-impl.so
+vendor/lib64/camera.device@3.5-external-impl.so
+vendor/lib64/camera.device@3.5-impl.so
+vendor/lib64/camera.device@3.6-external-impl.so
+vendor/lib64/vendor.qti.hardware.camera.device@1.0.so:vendor/lib64/vendor.qti.hardware.camera.device@1.0_vendor.so;FIX_SONAME
+vendor/lib64/vendor.qti.hardware.camera.device@2.0.so
+vendor/lib64/vendor.qti.hardware.camera.device@3.5.so
