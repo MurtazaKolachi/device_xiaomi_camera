@@ -22,8 +22,25 @@ blob_fixups: blob_fixups_user_type = {
     'system/lib64/libcamera_algoup_jni.xiaomi.so': blob_fixup()
         .add_needed('libgui_shim_miuicamera.so')
         .sig_replace('08 AD 40 F9', '08 A9 40 F9'),
+
     'system/lib64/libcamera_mianode_jni.xiaomi.so': blob_fixup()
         .add_needed('libgui_shim_miuicamera.so'),
+
+    # Ported logic from the shell script
+    'vendor/bin/hw/android.hardware.camera.provider@2.4-service_64': blob_fixup()
+        .replace_needed('vendor.qti.hardware.camera.device@1.0.so', 'vendor.qti.hardware.camera.device@1.0_vendor.so'),
+
+    'vendor/lib/android.hardware.camera.provider@2.4-legacy.so': blob_fixup()
+        .replace_needed('vendor.qti.hardware.camera.device@1.0.so', 'vendor.qti.hardware.camera.device@1.0_vendor.so'),
+
+    'vendor/lib/camera.device@1.0-impl.so': blob_fixup()
+        .replace_needed('vendor.qti.hardware.camera.device@1.0.so', 'vendor.qti.hardware.camera.device@1.0_vendor.so'),
+
+    'vendor/lib64/android.hardware.camera.provider@2.4-legacy.so': blob_fixup()
+        .replace_needed('vendor.qti.hardware.camera.device@1.0.so', 'vendor.qti.hardware.camera.device@1.0_vendor.so'),
+
+    'vendor/lib64/camera.device@1.0-impl.so': blob_fixup()
+        .replace_needed('vendor.qti.hardware.camera.device@1.0.so', 'vendor.qti.hardware.camera.device@1.0_vendor.so'),
 }  # fmt: skip
 
 lib_fixups: lib_fixups_user_type = {
