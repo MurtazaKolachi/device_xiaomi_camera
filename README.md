@@ -5,7 +5,13 @@ Prebuilt modded MIUI/Leica Camera 5.0 for Mi 10T/Mi 10T pro (apollo), to include
 ### How to use?
 
 1. Clone this repo to `device/xiaomi/camera`
-2. Clone https://gitlab.com/johnmart19/vendor_xiaomi_camera to 'vendor/xiaomi/camera'
+```
+git clone https://github.com/MurtazaKolachi/device_xiaomi_camera -b main device/xiaomi/camera
+```
+2. Clone https://gitlab.com/murtazakolachi/vendor_xiaomi_camera to 'vendor/xiaomi/camera'
+```
+git clone https://gitlab.com/MurtazaKolachi/vendor_xiaomi_camera -b main vendor/xiaomi/camera
+```
 3. Inherit it from `device.mk` in device tree:
 ```
 # Camera
