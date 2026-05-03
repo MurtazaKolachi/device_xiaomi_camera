@@ -19,7 +19,8 @@ PRODUCT_COPY_FILES += \
     $(CAMERA_PATH)/configs/permissions/system_ext/gson.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/gson.xml
 
 PRODUCT_PACKAGES += \
-    libgui_shim_miuicamera
+    libgui_shim_miuicamera \
+    libcamera_metadata_shim_apollo
 
 # CameraX Config Overwrite
 PRODUCT_COPY_FILES += \
