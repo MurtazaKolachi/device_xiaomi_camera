@@ -12,7 +12,8 @@ PRODUCT_COPY_FILES += \
      $(call find-copy-subdir-files,*,$(CAMERA_PATH)/configs/permissions/,$(TARGET_COPY_OUT_SYSTEM)/etc)
 
 PRODUCT_PACKAGES += \
-    libgui_shim_miuicamera
+    libgui_shim_miuicamera \
+    libcamera_metadata_shim_apollo
 
 # CameraX Config Overwrite
 PRODUCT_COPY_FILES += \
