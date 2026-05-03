@@ -2,3 +2,9 @@ cc_library {
     name: "libgui_camera_shim",
     srcs: ["libgui_camera_shim.c"],
 }
+
+cc_library_shared {
+    name: "libcamera_metadata_shim_apollo",
+    srcs: ["libcamera_metadata_shim_apollo.cpp"],
+    shared_libs: ["libdl"],
+}

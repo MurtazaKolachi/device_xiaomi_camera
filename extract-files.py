@@ -27,9 +27,11 @@ blob_fixups: blob_fixups_user_type = {
         .remove_needed('libhidltransport.so'),
     'system/lib64/libcamera_algoup_jni.xiaomi.so': blob_fixup()
         .add_needed('libgui_camera_shim.so')
+        .add_needed('libcamera_metadata_shim_apollo.so')
         .sig_replace('08 AD 40 F9', '08 A9 40 F9'),
     'system/lib64/libcamera_mianode_jni.xiaomi.so': blob_fixup()
-        .add_needed('libgui_shim_miuicamera.so'),
+        .add_needed('libgui_shim_miuicamera.so')
+        .add_needed('libcamera_metadata_shim_apollo.so'),
     'vendor/lib64/libarcsoft_single_chart_calibration.so': blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
 }  # fmt: skip
