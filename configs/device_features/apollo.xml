@@ -338,6 +338,10 @@
         <item>21</item>
         <!-- BOKEH -->
         <item>61</item>
+        <!-- MACRO -->
+        <item>22</item>
+        <!-- DEPTH -->
+        <item>60</item>
     </string-array>
     <!-- -->
     <string-array name="camera_adjust_picture_size_cmd_list">
