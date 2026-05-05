@@ -29,7 +29,8 @@ PRODUCT_COPY_FILES += \
 
 # Device-Features
 PRODUCT_COPY_FILES += \
-    $(CAMERA_PATH)/configs/device_features/apollo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/apollo.xml
+    $(CAMERA_PATH)/configs/device_features/apollo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/apollo.xml \
+    $(CAMERA_PATH)/configs/camera/xiaomi/supernightsnapshot.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/xiaomi/supernightsnapshot.json
 
 # Dex
 PRODUCT_DEXPREOPT_SPEED_APPS += \
