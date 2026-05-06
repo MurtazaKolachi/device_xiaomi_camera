@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Leica Camera Overlay Configuration for Poco F3 -->
+<!-- Leica Camera Overlay Configuration for Mi 10T -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
@@ -8,23 +8,37 @@
         main features are Leica/Film filters, AI Watermark, Supermoon, Leica/Redmi watermarks
         Parallel processing is usually broken on AOSP and MIUI/HyperOS ports, 
         on AOSP it may be fixed by including some libs, also heavily depends on Device Tree and ROM sources -->
-   <bool name="pref_camera_parallel_process_enable_default">true</bool>
+   <bool name="pref_camera_parallel_process_enable_default">false</bool>
 
    <!-- Portrait Mode -->
-   <!-- Disable Portrait Fix by default -->
-   <bool name="pref_portraitfix_default">false</bool>
+   <!-- Enable Portrait Fix by default -->
+   <bool name="pref_portraitfix_default">true</bool>
 
    <!-- Disable Experimental Portrait Fix by default -->
    <bool name="pref_experimental_portrait_default">false</bool>
 
-   <!-- Enable Parallel Processing for Portrait Mode by default -->
-   <bool name="pref_parallelportrait_default">true</bool>
+   <!-- Disable Parallel Processing for Portrait Mode by default -->
+   <bool name="pref_parallelportrait_default">false</bool>
+
+   <!-- VIDEO RESOLUTION -->
+   <!-- Enable 1080p 60fps Support for front camera -->
+   <bool name="pref_1080p60_default">true</bool>
+   <bool name="pref_front1080p60_default">true</bool>
 
    <!-- Enable 4k 30fps Support -->
    <bool name="pref_4k_default">true</bool>
 
-   <!-- Experimental - Enable 4k 60fps Support -->
+   <!-- Enable 4k 60fps Support -->
    <bool name="pref_4k60_default">true</bool>
+
+   <!-- Enable 8k Support -->
+   <bool name="pref_8k_default">true</bool>
+
+   <!-- Enable EIS Support -->
+   <bool name="pref_eis_default">true</bool>
+   <bool name="pref_1080p60EIS_default">true</bool>
+   <bool name="pref_4kEIS_default">true</bool>
+   <bool name="pref_front_eis_default">true</bool>
 
    <!-- Enable Universal Settings by default -->
    <bool name="use_universal_settings">true</bool>
@@ -36,8 +50,12 @@
    <bool name="pref_scan_qrcode_default">true</bool>
 
    <!-- Night Mode -->
-   <!-- Enable Parallel Processing for Night Mode -->
-   <bool name="pref_parallelnight_default">true</bool>
+   <!-- Disable Parallel Processing for Night Mode -->
+   <bool name="pref_parallelnight_default">false</bool>
+
+   <!-- Enable Fixes for Night Mode -->
+   <bool name="pref_night_fix_2_default">true</bool>
+   <bool name="pref_night_fix_3_default">true</bool>
 
    <!-- Features -->
    <!-- Set Documents Ver. 2 by default -->
@@ -48,6 +66,64 @@
 
    <!-- Enable 0.5x UltraWide lens by default -->
    <!-- 0 - Default, 1 - 0.5x, 2 - 0.6x -->
-   <string name="pref_uw_default">1</string>
+   <string name="pref_uw_default">2</string>
 
-</resources>
+   <!-- Enable Limit Video SAT (Smooth Transition)-->
+   <bool name="pref_limit_video_sat_default">true</bool>
+
+   <!-- HDR / COLOR -->
+   <bool name="pref_videoHDR_default">true</bool>
+   <bool name="pref_hdr10_video_mode_default">true</bool>
+   <bool name="pref_hdr10plus_video_mode_default">true</bool>
+   <bool name="pref_true_colour_video_mode_default">true</bool>
+   <bool name="pref_10bit_default">true</bool>
+
+   <!-- SUPER RESOLUTION / HIGH-RES -->
+   <bool name="pref_camera_sr_enable_default">true</bool>
+   <bool name="pref_srreprocess_default">true</bool>
+
+   <!-- High-res mode: "1" enables the dedicated 64/108MP toggle -->
+   <string name="pref_camera_high_resolution_default">1</string>
+
+   <!-- AI / SCENE DETECTION -->
+   <bool name="pref_camera_ai_noise_reduction_default">true</bool>
+   <bool name="pref_camera_ai_shutter_default">true</bool>
+   <bool name="pref_camera_intelligent_noise_reduction_default">true</bool>
+
+   <!-- FACE / BEAUTY / TRACKING -->
+   <bool name="pref_camera_track_focus_preferred_default">true</bool>
+   <bool name="pref_camera_obj_track_default">true</bool>
+   <bool name="pref_video_facedetection_default">true</bool>
+   <bool name="pref_camera_nevus_wipe_default">true</bool>
+
+   <!-- FOCUS / EXPOSURE -->
+   <bool name="pref_brightness_default">true</bool>
+
+   <!-- PHOTO & VIDEO PROCESSING -->
+   <bool name="pref_camera_heic_image_format_default">true</bool>
+   <!-- Standardize post-processing color pipeline -->
+   <string name="pref_qc_camera_saturation_default">1</string>
+   <string name="pref_qc_camera_contrast_default">1</string>
+
+   <!-- QUICK SHOT / SHUTTER -->
+   <bool name="pref_camera_long_pressing_shutter_default">true</bool>
+   <bool name="pref_camera_snap_default">true</bool>
+   <bool name="pref_fastshot_default">true</bool>
+
+   <!-- AUDIO -->
+   <bool name="pref_3d_audio_denoise_default">true</bool>
+   <bool name="pref_wind_denoise_default">true</bool>
+
+   <!-- FRONT CAMERA -->
+   <bool name="pref_front_denoise_default">true</bool>
+
+   <!-- FEATURES / QR / TIPS -->
+   <bool name="pref_lens_dirty_tip_default">true</bool>
+   <bool name="pref_camera_lying_tip_default">true</bool>
+
+   <!-- PRO MODE / LOG / INTERFACE -->
+   <bool name="pref_expert_default">true</bool>
+   <bool name="pref_camera_log_video_mode_default">true</bool>
+   <bool name="pref_camera_focus_peak_default">true</bool>
+   <bool name="pref_camera_exposure_feedback_default">true</bool>
+</resources>   
