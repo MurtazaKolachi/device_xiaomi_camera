@@ -1,6 +1,5 @@
 multiCameraEnable=TRUE
-logInfoMask=0x10098
-overrideLogLevels=0x1F
+overrideLogLevels=0x3
 #pdafHWEnable=TRUE
 oisMaxWaitingTime=70
 enableOISOptimization=TRUE

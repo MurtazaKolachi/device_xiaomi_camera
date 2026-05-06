@@ -45,7 +45,17 @@ PRODUCT_PACKAGES += \
     miui_camera_libOpenCL_symlink \
     miui_camera_libmqsas_symlink \
     miui_camera_libcameraimpl_symlink \
-    miui_camera_libopencl_camera_symlink
+    miui_camera_libopencl_camera_symlink \
+    persist.log.tag.XIAOMI_AIASD=S \
+    persist.log.tag.MIALGO_SD=S \
+    persist.log.tag.CHIMULTICAMCONTROLLER=S \
+    persist.log.tag.HardKeyTracker=S \
+    persist.log.tag.ModuleManager=S \
+    persist.log.tag.NotificationCenter=S \
+    persist.log.tag.NearbyDiscovery=S \
+    persist.log.tag.ClearcutMetricXmitter=S \
+    persist.log.tag.KeyguardRootViewBinder=S \
+    persist.log.tag.AccessPointsManager=S
 
 # Properties
 PRODUCT_SYSTEM_PROPERTIES += \
