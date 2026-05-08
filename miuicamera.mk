@@ -98,4 +98,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.camera.privapp.list=com.android.camera
 
+# System Server Jars
+PRODUCT_SYSTEM_SERVER_JARS += \
+    camerax-vendor-extensions
+
 $(call inherit-product, $(CAMERA_VENDOR_PATH)/camera-vendor.mk)
