@@ -28,16 +28,25 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcamera_metadata_shim_apollo.so'),
     'vendor/lib64/libarcsoft_single_chart_calibration.so': blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib64/hw/vendor.xiaomi.hardware.campostproc@1.0-impl.so': blob_fixup()
+        .add_needed('libgrallocutils.so')
+        .remove_needed('libhidltransport.so'),
+    'vendor/lib64/com.qcom.plugin.jpegencode.so': blob_fixup()
+        .remove_needed('libhidltransport.so'),
+    'vendor/bin/f2player': blob_fixup()
+        .remove_needed('libhidltransport.so'),
+    'vendor/bin/hw/vendor.xiaomi.hardware.campostproc@1.0-service': blob_fixup()
+        .remove_needed('libhidltransport.so'),
+    'system/lib64/libmisys_jni.so': blob_fixup()
+        .remove_needed('libhidltransport.so'),
 }  # fmt: skip
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    (
-        'libgrallocutils',
-    ): lib_fixup_remove,
 }
 
 namespace_imports = [
+    'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/common/libqti-perfd-client',
     'vendor/qcom/opensource/display',
     'vendor/xiaomi/apollo',

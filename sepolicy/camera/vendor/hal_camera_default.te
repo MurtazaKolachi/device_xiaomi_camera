@@ -1,5 +1,6 @@
 binder_call(hal_camera_default, platform_app)
 
+allow hal_camera_default system_data_file:dir { search };
 allow hal_camera_default mnt_vendor_file:dir { search };
 allow hal_camera_default proc_stat:file { open read };
 allow hal_camera_default vendor_xdsp_device:chr_file { read };
@@ -17,6 +18,7 @@ allow hal_camera_client vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_man
 
 # Allow camera to access /data/misc
 typeattribute hal_camera_default data_between_core_and_vendor_violators;
+typeattribute hal_camera_default mlstrustedsubject;
 
 # Allow camera to access /data/misc
 allow hal_camera_default camera_data_file:sock_file write;

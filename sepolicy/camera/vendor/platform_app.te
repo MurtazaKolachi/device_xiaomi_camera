@@ -1,6 +1,9 @@
 # Allow to execute data files
 allow platform_app app_data_file:file execute;
 
+# Allow to read rootfs (needed for some MIUI camera versions)
+allow platform_app rootfs:dir r_dir_perms;
+
 # Allow to find camera hal
 allow platform_app hal_xiaomi_camera_hwservice:hwservice_manager find;
 
