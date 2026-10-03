@@ -1,6 +1,3 @@
-# Allow to find camera hal
-allow miui_camera_platform_domain hal_xiaomi_camera_hwservice:hwservice_manager find;
-
 # Allow to call camera hidl
 binder_call(miui_camera_platform_domain, hal_camera_default)
 
