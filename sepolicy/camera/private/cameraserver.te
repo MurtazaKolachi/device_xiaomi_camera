@@ -1,3 +1,4 @@
-allow cameraserver property_socket:sock_file write;
-allow cameraserver init:unix_stream_socket connectto;
-set_prop(cameraserver, exported_system_prop)
+# Legacy MIUI camera status must not grant unrelated system-property writes.
+system_internal_prop(miui_camera_apk_prop)
+set_prop(cameraserver, miui_camera_apk_prop)
+get_prop(miui_camera_platform_domain, miui_camera_apk_prop)
