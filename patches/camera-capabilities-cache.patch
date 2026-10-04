@@ -1,6 +1,6 @@
 --- a/smali_classes2/d/c/a/q6/t8/b/q.smali
 +++ b/smali_classes2/d/c/a/q6/t8/b/q.smali
-@@ -407,16 +407,8 @@
+@@ -407,14 +407,6 @@
      .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
  
      :try_start_1
@@ -19,7 +19,7 @@
  
 --- a/smali_classes2/d/c/a/q6/t8/b/o.smali
 +++ b/smali_classes2/d/c/a/q6/t8/b/o.smali
-@@ -287,16 +287,8 @@
+@@ -287,14 +287,6 @@
      .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
  
      :try_start_1

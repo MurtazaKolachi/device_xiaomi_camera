@@ -21,8 +21,6 @@ from extract_utils.main import (
 blob_fixups: blob_fixups_user_type = {
     'system/priv-app/MiuiCamera/MiuiCamera.apk': blob_fixup()
         .apktool_patch('patches'),
-    'system/lib64/libcamera_mianode_jni.xiaomi.so': blob_fixup()
-        .add_needed('libgui_camera_shim.so'),
     'system/lib64/libmicampostproc_client.so': blob_fixup()
         .remove_needed('libhidltransport.so'),
     'system/lib64/libcamera_algoup_jni.xiaomi.so': blob_fixup()
