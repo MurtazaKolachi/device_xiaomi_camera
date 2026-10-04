@@ -14,7 +14,7 @@ system/lib64/libcamera_mianode_jni.xiaomi.so
 # Device OpenCL Prebuilts
 system_ext/lib/libOpenCL_system.so
 system_ext/lib64/libOpenCL_system.so
-system_ext/lib64/libopencl-camera.so
+system/lib64/libopencl-camera.so:system_ext/lib64/libopencl-camera.so
 
 # Device Camera Deps
 system/lib64/libarcsoft_single_chart_calibration.so
@@ -146,7 +146,6 @@ vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 # Device Camera Dependencies & Overwrites
 system/lib64/libmqsas.so
 system_ext/lib64/libcameraimpl.so
-system_ext/lib64/libopencl-camera.so:system/lib64/libopencl-camera.so
 vendor/etc/camera/sr_params.xml
 vendor/etc/camera/miai_psn_config.yaml
 
