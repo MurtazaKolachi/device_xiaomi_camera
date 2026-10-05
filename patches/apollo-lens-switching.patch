@@ -1,0 +1,115 @@
+diff -ruN a/smali_classes7/com/mi/config/DataItemFeature.smali b/smali_classes7/com/mi/config/DataItemFeature.smali
+--- a/smali_classes7/com/mi/config/DataItemFeature.smali	2026-10-05 13:22:30.250847426 +0000
++++ b/smali_classes7/com/mi/config/DataItemFeature.smali	2026-10-05 13:15:11.115819913 +0000
+@@ -3254,6 +3254,17 @@
+ 
+     instance-of v0, v0, Lcom/mi/device/Alioth;
+ 
++    if-eqz v0, :cond_alioth_opt
++
++    const/4 p0, 0x1
++
++    return p0
++
++    :cond_alioth_opt
++    iget-object v0, p0, Lcom/mi/config/DataItemFeature;->A:Lcom/mi/device/Common;
++
++    instance-of v0, v0, Lcom/mi/device/Apollo;
++
+     if-eqz v0, :cond_0
+ 
+     const/4 p0, 0x1
+@@ -14161,9 +14172,9 @@
+ 
+     if-eqz v1, :cond_0
+ 
+-    check-cast v1, Ljava/lang/Integer;
++    check-cast v1, Ljava/lang/Number;
+ 
+-    invoke-virtual {v1}, Ljava/lang/Integer;->shortValue()S
++    invoke-virtual {v1}, Ljava/lang/Number;->shortValue()S
+ 
+     move-result v1
+ 
+@@ -18355,6 +18366,17 @@
+ .method public lensCount()I
+     .locals 2
+ 
++    iget-object v0, p0, Lcom/mi/config/DataItemFeature;->A:Lcom/mi/device/Common;
++
++    instance-of v0, v0, Lcom/mi/device/Apollo;
++
++    if-eqz v0, :cond_apollo_lens
++
++    const/4 v0, 0x3
++
++    return v0
++
++    :cond_apollo_lens
+     invoke-static {}, Lmodify/UniversalSettings;->isUniversalSettings()Z
+ 
+     move-result v0
+@@ -22036,9 +22058,9 @@
+ 
+     if-eqz v1, :cond_0
+ 
+-    check-cast v1, Ljava/lang/Integer;
++    check-cast v1, Ljava/lang/Number;
+ 
+-    invoke-virtual {v1}, Ljava/lang/Integer;->shortValue()S
++    invoke-virtual {v1}, Ljava/lang/Number;->shortValue()S
+ 
+     move-result v1
+ 
+@@ -22865,6 +22887,17 @@
+ 
+     instance-of v0, v0, Lcom/mi/device/Alioth;
+ 
++    if-eqz v0, :cond_alioth_vsat
++
++    const/4 p0, 0x1
++
++    return p0
++
++    :cond_alioth_vsat
++    iget-object v0, p0, Lcom/mi/config/DataItemFeature;->A:Lcom/mi/device/Common;
++
++    instance-of v0, v0, Lcom/mi/device/Apollo;
++
+     if-eqz v0, :cond_1
+ 
+     const/4 p0, 0x1
+diff -ruN a/smali_classes7/com/mi/device/Apollo.smali b/smali_classes7/com/mi/device/Apollo.smali
+--- a/smali_classes7/com/mi/device/Apollo.smali	2026-10-05 13:22:30.132680778 +0000
++++ b/smali_classes7/com/mi/device/Apollo.smali	2026-10-05 13:06:24.528721933 +0000
+@@ -152,6 +152,30 @@
+     return p0
+ .end method
+ 
++.method public getSupportedOpticalZoomRatioCombination()I
++    .locals 0
++
++    const/4 p0, 0x3
++
++    return p0
++.end method
++
++.method public isSupportOpticalZoom()Z
++    .locals 0
++
++    const/4 p0, 0x1
++
++    return p0
++.end method
++
++.method public isSupportedOpticalZoom()Z
++    .locals 0
++
++    const/4 p0, 0x1
++
++    return p0
++.end method
++
+ .method public isDisableMfnrNoWaterMark()Z
+     .locals 0
+ 
