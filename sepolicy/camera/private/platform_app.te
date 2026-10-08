@@ -4,3 +4,7 @@ allow miui_camera_platform_domain {
     perfshielder
     ProcessManager
 }:service_manager find;
+
+# The Leica app reads camera.* feature/debug properties during initialization
+# and capture. These are labeled with the device's public camera property type.
+get_prop(miui_camera_platform_domain, product_camera_prop)
