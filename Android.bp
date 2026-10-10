@@ -12,6 +12,17 @@ cc_prebuilt_library_shared {
     prefer: true,
 }
 
+// MiuiScanner requires MIUI's legacy analytics shared-library name at package
+// scan time. The app bundles the only analytics Binder interface it uses, so a
+// marker library is sufficient on AOSP and avoids importing the MIUI framework.
+java_library {
+    name: "miuistatssdkshared",
+    srcs: ["compat/miuistatssdkshared/MiuiStatSdkShared.java"],
+    installable: true,
+    stem: "miuistatssdkshared",
+    sdk_version: "current",
+}
+
 // MiuiCamera JNI library symlinks
 //
 // The shipped APK directly loads these JNI libraries with System.loadLibrary().

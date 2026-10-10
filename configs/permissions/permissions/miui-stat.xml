@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MiuiScanner declares this legacy MIUI analytics library as required. -->
+<permissions>
+    <library
+        name="miui-stat.jar"
+        file="/system/framework/miuistatssdkshared.jar" />
+</permissions>

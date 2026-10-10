@@ -20,7 +20,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libgui_shim_miuicamera \
-    libcamera_metadata_shim_apollo
+    libcamera_metadata_shim_apollo \
+    miuistatssdkshared
 
 # CameraX Config Overwrite
 PRODUCT_COPY_FILES += \

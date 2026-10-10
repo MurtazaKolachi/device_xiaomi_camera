@@ -15,4 +15,13 @@
         <permission name="android.permission.READ_MEDIA_IMAGES" fixed="false" />
         <permission name="android.permission.READ_MEDIA_VIDEO" fixed="false" />
     </exception>
+
+    <exception package="com.xiaomi.scanner">
+        <!-- Scanner is entered directly from Leica; grant its required camera
+             and legacy media access during provisioning so the hand-off works
+             on first use without an intermediate permission failure. -->
+        <permission name="android.permission.CAMERA" fixed="true" />
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="true" />
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="true" />
+    </exception>
 </exceptions>

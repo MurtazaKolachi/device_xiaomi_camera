@@ -44,6 +44,13 @@
    <bool name="pref_scan_qrcode_default">true</bool>
 
    <!-- Night Mode -->
+   <!-- Apollo's MIUI 14 camera stack uses the AlgoUp Super Night pipeline. The
+        universal Leica build defaults this capability to the legacy value and
+        only corrects it after users manually enable "Night mode fix 1". Apply
+        that same feature inversion as the device default while still allowing
+        an explicitly persisted user setting to override it. -->
+   <bool name="pref_night_fix_1_default">true</bool>
+
    <!-- Enable Parallel Processing for Night Mode -->
    <bool name="pref_parallelnight_default">true</bool>
 
