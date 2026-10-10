@@ -46,6 +46,7 @@ PRODUCT_PACKAGES += \
 # Properties
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.com.google.lens.oem_camera_package=com.android.camera \
+    ro.miui.ui.version.name=V14 \
     ro.miui.notch=1 \
     persist.sys.cam.skip_detach_image=true
 
